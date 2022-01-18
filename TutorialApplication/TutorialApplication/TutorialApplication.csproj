@@ -245,6 +245,7 @@
     </Compile>
     <Compile Include="TutorialMaster.Master.cs">
       <DependentUpon>TutorialMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="TutorialMaster.Master.designer.cs">
       <DependentUpon>TutorialMaster.Master</DependentUpon>
@@ -271,6 +272,16 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TutorialApplicationBusiness\TutorialApplicationBusiness.csproj">
+      <Project>{85da8b0b-5b1d-43bf-ab4e-96b134b4f042}</Project>
+      <Name>TutorialApplicationBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TutorialApplicationEntity\TutorialApplicationEntity.csproj">
+      <Project>{bbc27579-2d51-45b1-85cf-58facfd120c6}</Project>
+      <Name>TutorialApplicationEntity</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
