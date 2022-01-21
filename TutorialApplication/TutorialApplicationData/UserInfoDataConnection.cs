@@ -27,5 +27,14 @@ namespace TutorialApplicationData
             adp.Fill(dt);
             return dt;
         }
+
+        public DataTable LoginCheck(string email,string password)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection sqlConnectionObj = new SqlConnection(sqlConnectionStr);
+            SqlDataAdapter adp = new SqlDataAdapter("select firstname,lastname,email,mobile from userinfo where email='"+email+"' and pwd='"+password+"'", sqlConnectionObj);
+            adp.Fill(dt);
+            return dt;
+        }
     }
 }

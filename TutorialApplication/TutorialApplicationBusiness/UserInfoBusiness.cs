@@ -22,5 +22,11 @@ namespace TutorialApplicationBusiness
             DataTable dt = userObj.GetUserInfo();
             return dt;
         }
+        public DataTable LoginCheck(string email,string password)
+        {
+            UserInfoDataConnection userObj = new UserInfoDataConnection();
+            DataTable dt = userObj.LoginCheck(email,password);
+            return dt;
+        }
     }
 }
