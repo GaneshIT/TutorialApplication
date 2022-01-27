@@ -1,7 +1,28 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/TutorialMaster.Master" CodeBehind="Index.aspx.cs" Inherits="TutorialApplication.Index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
+<%--    css--%>
+    <%--javascript--%>
+    <script type="text/javascript">
+        function validate() {
+            var flag = false;
+            var Tutorialid = document.getElementById("<%=txtTutorialId.ClientID%>").value;
+            var TutorialName = document.getElementById("<%=txtTutorialName.ClientID%>").value;
+            var TutorialDesc = document.getElementById("<%=txtTutorialDesc.ClientID%>").value;
+            var Published = document.getElementById("<%=txtPublished.ClientID%>").value;
+            if (Tutorialid == '')
+                alert('Tutorialid cannot be empty');
+            else if (TutorialName == '')
+                alert('TutorialName cannot be empty');
+            else if (TutorialDesc == '')
+                alert('TutorialDesc cannot be empty');
+            else if (Published == '')
+                alert('Published cannot be empty');
+            else
+                flag = true;
+            return flag;
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -38,7 +59,7 @@
             <tr>
                 <td></td>
                 <td>
-                    <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />
+                    <asp:Button ID="btnSave" runat="server" Text="Save" OnClientClick="return validate()" OnClick="btnSave_Click" />
                     <asp:Button ID="btnEdit" runat="server" OnClick="btnEdit_Click" Text="Edit" />
                     <asp:Button ID="btnUpdate" runat="server" OnClick="btnUpdate_Click" Text="Update" />
                     <asp:Button ID="btnDelete" runat="server" OnClick="btnDelete_Click" Text="Delete" />

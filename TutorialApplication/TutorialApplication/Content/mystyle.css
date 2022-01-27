@@ -1,0 +1,29 @@
+﻿.tablestyle1 {
+    background-color: antiquewhite;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.tablestyle2 {
+    background-color: aquamarine;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.tablestyle3 {
+    background-color: cadetblue;
+    font-family: 'Times New Roman', Times, serif
+}
+
+#txtemail {
+    background-color: orangered;
+    border: dashed
+}
+
+#txtfname {
+    background-color: aqua
+}
+
+table {
+    background-color: bisque;
+    font-size: larger;
+}
+

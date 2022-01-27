@@ -4,6 +4,7 @@
 
 <html lang="en">
 <head runat="server">
+    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - My ASP.NET Application</title>
@@ -14,6 +15,16 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <%--CSS - casecading style sheet
+        
+        3 Main rules
+        1.  .       - classname  - reuse
+        2.  tag name  -  html tags
+        3.  #         - control id or tag id
+
+        3types css - 1. inline style, 2. internal style 3. external style
+
+        --%>
 
 </head>
 <body>

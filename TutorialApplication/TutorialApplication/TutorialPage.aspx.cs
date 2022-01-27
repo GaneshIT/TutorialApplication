@@ -7,16 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace TutorialApplication
 {
-    public partial class Contact : Page
+    public partial class TutorialPage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Read data from Session
-            if (Session["email"] != null)
-            {
-                lblemail.Text = Session["email"].ToString();
-                lblfname.Text = Session["fname"].ToString();
-            }
+
         }
     }
 }

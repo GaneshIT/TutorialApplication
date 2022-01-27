@@ -5,10 +5,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <%--css section--%>
+    <link rel="stylesheet" href="Content/mystyle.css" />
+    <%--Javascript - Client side scripting language
+        
+        --%>
+    
 </head>
 <body>
     <form id="form1" runat="server">
-        <div><h1>Register</h1>
+        <div><h1 style="color:aqua;font-size:12pt;font-weight:bolder">Register</h1>
             <hr />
             <table>
                 <tr>
@@ -59,7 +65,18 @@
                 <hr />
                 <asp:GridView ID="gvUserInfo" runat="server"></asp:GridView>
             </div>
+            
         </div>
+       
     </form>
+
+    <%--Scripting section--%>
+    <script>
+        function validate() {
+        }
+        function GetUserDetails() {
+
+        }
+    </script>
 </body>
 </html>

@@ -21,7 +21,26 @@ namespace TutorialApplication
             DataTable dtLogin = userInfoBusiness.LoginCheck(txtemail.Text, txtpwd.Text);
             if (dtLogin.Rows.Count > 0)
             {
+                //Cookie
+                //1. Persist Cookie-(not have expired time) 2.Non-Persist Cookie-(has expired time )
+                //HttpCookie httpCookie = new HttpCookie("logininfo");
+                //httpCookie["fname"] = dtLogin.Rows[0][0].ToString();
+                //httpCookie["lname"] = dtLogin.Rows[0][1].ToString();
+                //httpCookie["email"] = dtLogin.Rows[0][2].ToString();
+                //httpCookie["mobile"] = dtLogin.Rows[0][3].ToString();
+                //httpCookie.Expires.Add(new TimeSpan(0, 0, 20));
+                //Response.Cookies.Add(httpCookie);
+
+                //QueryString
+                //Response.Redirect("Home.aspx?email=" + dtLogin.Rows[0][2].ToString()+"&fname="+ dtLogin.Rows[0][0].ToString());
+
+                //session storage
+                Application["userdetails"] = dtLogin;
+                Application["email"] = dtLogin.Rows[0][2].ToString();
+                Application["fname"] = dtLogin.Rows[0][0].ToString();
                 Response.Redirect("Home.aspx");
+
+
             }
             else
             {
@@ -30,3 +49,10 @@ namespace TutorialApplication
         }
     }
 }
+
+/* localhost:2343/Tutorial/viewTutorial.aspx?tutorialid=101
+ * State Management
+ * 1.Client side           2.Server side
+ * Client side: Cookies,viewstate,querystring,hiddenfield
+ * Server side: Sesssion(single user access) and application(multi user access)
+ */
